@@ -1,3 +1,5 @@
+import './temperatureInput.css';
+
 function TemperatureInput(props) {
     const scale = props.scale;
     const scaleNames = {
@@ -11,6 +13,7 @@ function TemperatureInput(props) {
         <fieldset>
             <legend>Enter temperature in {scaleNames[scale]}</legend>
             <input 
+                type="text"
                 value={props.temperature}
                 onChange={handleChange}
             />

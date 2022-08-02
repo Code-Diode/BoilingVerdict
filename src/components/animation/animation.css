@@ -1,0 +1,107 @@
+.container {
+  width: 300px;
+  height: 300px;
+}
+/* Pot with handles  */
+.pot {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  border: 5px transparent solid;
+  background-color: white;
+  z-index: 2;
+  border-radius: 5px 5px 50px 50px;
+  margin: auto;
+  box-shadow: 0 0 0 5px #808080;
+  overflow: hidden;
+}
+
+.pot-handle-left,
+.pot-handle-right {
+  position: relative;
+  background-color: #808080;
+  width: 10px;
+  height: 40px;
+  z-index: 1;
+  border-radius: 3px;
+}
+
+.pot-handle-left {
+  top: 86px;
+  left: 30px;
+  transform: rotate(-50deg);
+}
+
+.pot-handle-right {
+  top: 45px;
+  left: 260px;
+  transform: rotate(50deg);
+}
+
+/* Water inside pot  */
+
+.water {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 71%;
+  background: #4973ff;
+}
+
+/* Bubbles inside water  */
+
+.bubble {
+  border-radius: 50%;
+  background-color: rgba(240, 240, 250, 0.7);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  top: 50px;
+  position: relative;
+}
+
+.bubble:nth-child(1) {
+  left: 50px;
+  animation: animate 1.5s linear infinite;
+}
+.bubble:nth-child(2) {
+  left: 90px;
+  animation: animate 1.7s linear infinite;
+}
+.bubble:nth-child(3) {
+  left: 150px;
+  animation: animate 1s linear infinite;
+}
+.bubble:nth-child(4) {
+  left: 30px;
+  animation: animate 3s linear infinite;
+}
+.bubble:nth-child(5) {
+  position: relative;
+  left: 110px;
+  animation: animate 1s linear infinite;
+}
+.bubble:nth-child(6) {
+  left: 130px;
+  top: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    top: 100px;
+  }
+  50% {
+    top: 50px;
+    opacity: 0.7;
+  }
+  75% {
+    top: 10px;
+    opacity: 0.5;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
